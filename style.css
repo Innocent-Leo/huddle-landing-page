@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Fonts */
+  --Head: "Poppins";
+  --Body: "Open Sans";
+
+  /* Colors */
+  --Purple: hsl(257, 40%, 49%);
+  --Magenta: hsl(300, 69%, 71%);
+}
+
+body {
+  background-color: var(--Purple);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.background-image img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+header img {
+  width: 130px;
+  margin-bottom: 3.5rem;
+}
+
+.illustration-box img {
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  color: white;
+}
+
+.details h1 {
+  font-family: var(--Head), sans-serif;
+  font-weight: 600;
+}
+
+.details p {
+  font-family: var(--Body), sans-serif;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+
+.details button {
+  height: 2.5rem;
+  width: 62%;
+  border: none;
+  border-radius: 2rem;
+  color: var(--Purple);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.details button:hover {
+  background-color: var(--Magenta);
+  color: white;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.socials span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 1rem;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  color: white;
+}
+
+.socials span:hover {
+  color: var(--Magenta);
+}
+
+@media (min-width: 900px) {
+  body {
+    padding: 1rem 4rem;
+  }
+
+  .background-image img {
+    width: auto;
+    height: 100vh;
+  }
+
+  header img {
+    margin-bottom: 2rem;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  .illustration-box {
+    flex: 1.5;
+  }
+
+  .details {
+    flex: 1;
+    text-align: start;
+    align-items: start;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .details h1 {
+    width: 90%;
+  }
+
+  .details button {
+    width: 35%;
+  }
+
+  .socials {
+    margin-top: 0.5rem;
+    justify-content: end;
+  }
+}
